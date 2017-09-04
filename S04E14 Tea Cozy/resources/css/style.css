@@ -1,0 +1,264 @@
+/*
+I really struggled with this one, I did have it all nice and responsive but then as soon as i added the 
+background images in, the responsiveness went out the window. No real idea and I wasted 15+ hours on it
+so time to move on.
+
+I understand that I need to "flatten" the CSS and remove duplicated entries, and make it more semantic to
+the purpose but the time to spend on this one is over. My work does not give me unlimited time to complete 
+this at my leisure ... so Maybe later ...  
+
+GC
+*/
+
+/*	https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/				*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+	
+/*	--------------------------------------	*/
+/*					GLOBAL Stuff										*/
+/*	--------------------------------------	*/
+body {
+	font-family: Helvetica, sans-serif;
+	font-size: 22px;
+	color: seashell;
+	background-color: #262626;
+	opacity: 0.9;
+	text-align: center;
+	margin: 0;
+}
+main, footer, #mission, #products, #locations {
+	border-radius: 10px;
+}
+section {
+}
+.flex-col {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;    
+}
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;    
+}
+.flex-item {
+	flex-grow: 1;
+	flex-shrink: 1; 
+}
+.flex-item2 {
+	flex-grow: 1;
+}
+/*
+*/
+h2 {
+	margin-bottom: 0;
+}
+
+/*	--------------------------------------	*/
+/*					HEADER Stuff										*/
+/*	--------------------------------------	*/
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;    
+	flex-direction: row;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	height: 69px;
+	background-color: #262626;
+}
+.logo {
+	max-height: 50px;
+	padding-left: 20px;
+}
+.nav-bar {
+	text-align: right;
+	padding-right: 20px;
+}
+.nav-link {
+	padding: 20px 10px;
+	color: seashell;
+}
+/*	--------------------------------------	*/
+
+
+
+/*	--------------------------------------	*/
+/*						MAIN Stuff										*/
+/*	--------------------------------------	*/
+main {
+	background-color: #262626;
+	padding: 70px 1px 0 1px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 1200px;
+}
+
+
+/*	[	======= DIV 1 - Mission	=======	]	*/
+/*
+	min-width: 1000px;
+	min-height: 700px;
+*/
+#mission {
+	height: 700px;
+	background-image: url('../images/img-mission-background.jpg');
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;    
+	align-items: center;    
+}
+.miss-col {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;    
+	align-items: center;    
+	background-color: #262626;
+	width: 1200px;
+}
+.miss-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;    
+	align-items: center;    
+}
+
+
+
+/*	[	======= DIV 2 - Products	=======	]	*/
+#products {
+	background-color: #262626;
+	max-width: 1000px;
+	min-width: 600px;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;    
+	align-items: center;   
+	margin-top: 25px;	
+}
+.product-image {
+	width: 300px;
+	height: 200px;
+	margin-bottom: 10px;
+}
+.product-name {
+}
+
+
+
+.bluediv {
+	background-color: blue;
+}
+.greendiv {
+	background-color: green;
+}
+.browndiv {
+}
+.bluediv, .greendiv, .browndiv  {
+	margin: auto;
+	padding: 1px;
+	border-radius: 10px;
+}
+/*
+	background-color: Sienna;
+	background-color: peru;
+*/
+
+.goldbox, .redbox, .brownbox  {
+	border-radius: 7px;
+	margin: 1px;
+}
+.goldbox {
+	background-color: gold;
+	max-width: 300px;
+	min-width: 300px;
+	height: 200px;
+}
+.redbox {
+	background-color: red;
+	padding: 10px;
+}
+
+
+
+/*	[	======= DIV 3 - Locations	=======	]	*/
+	/*
+	*/
+#locations {
+	background-image: url('../images/img-locations-background.jpg');
+	background-size: cover;
+	min-width: 1200px;
+	min-height: 500px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;    
+	align-items: center;    
+	margin-top: 25px;	
+}
+.loca-div {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;    
+	align-items: center;    
+	margin: auto;
+}
+.loca-box {
+	max-width: 300px;
+	min-width: 300px;
+	margin: 15px 40px 0 40px;
+	background-color: #262626;
+}
+.br {	border: 1px dotted red;	}
+.bb {	border: 1px dotted blue;	}
+.bg {	border: 1px dotted green;	}
+
+.loca-col {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;    
+	align-items: center;    
+	height: 300px;
+}
+.loca-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;    
+	align-items: center;    
+}
+.loca-item {
+	flex-grow: 1;
+	flex-shrink: 1; 
+}
+.loca-item2 {
+	flex-grow: 1;
+}
+
+/*	--------------------------------------	*/
+/*					FOOTER Stuff										*/
+/*	--------------------------------------	*/
+footer {
+}
+.contact-box{
+	min-width: 500px;
+}
+.copyright{
+	text-align: left;
+	margin-left: 20px;
+}
